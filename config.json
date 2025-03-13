@@ -1,0 +1,11 @@
+{
+  "port": 3000,
+  "d2s": {
+    "proto": "https",
+    "host": "ps2.d2s.org",
+    "base": "/api/v1",
+    "user": "username",
+    "pass": "password"
+  },
+  "tileserver": "https://dev.triticeaetoolbox.org/cog/tiles/WebMercatorQuad/{z}/{x}/{y}@2x?url={url}"
+}
