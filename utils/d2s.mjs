@@ -17,7 +17,7 @@ const getOrthos = async (project) => {
 
           // Only include ortho products
           if ( dp.data_type === 'ortho' ) {
-            const url = dp.url;
+            const url = dp.url + `?API_KEY=${config.d2s.apikey}`;
             const layer = config.tileserver.replaceAll('{url}', url);
 
             // Add data product info to list of orthos

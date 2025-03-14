@@ -5,7 +5,8 @@
     "host": "ps2.d2s.org",
     "base": "/api/v1",
     "user": "username",
-    "pass": "password"
+    "pass": "password",
+    "apikey": "api key from D2S website"
   },
   "tileserver": "https://tcap.pw.usda.gov/titiler/cog/tiles/WebMercatorQuad/{z}/{x}/{y}@2x?url={url}"
 }
