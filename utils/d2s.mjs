@@ -8,7 +8,7 @@ const getOrthos = async (project) => {
   const { error, data:flights } = await get(`/projects/${project}/flights`);
 
   // Parse each flight
-  if ( flights ) {
+  if ( flights && Array.isArray(flights) ) {
     flights.forEach((f) => {
 
       // Parse the flight's data products
@@ -54,19 +54,19 @@ const getCoords = async (project) => {
 
   // Get the vector layer that has a type of polygon
   let vector;
-  if ( vector_layers ) {
+  if ( vector_layers && Array.isArray(vector_layers) ) {
     vector_layers.forEach((vl) => {
       if ( vl.geom_type === 'polygon' ) {
         vector = vl.layer_id;
       }
-    })
+    });
   }
 
   // Download the vector layer
   const { error:errorGJ, data:geo_json } = await get(`/projects/${project}/vector_layers/${vector}/download?format=json`);
   
   // Parse each feature in the vector layer
-  if ( geo_json.features ) {
+  if ( geo_json.features && Array.isArray(geo_json.features) ) {
     geo_json.features.forEach((f) => {
       const plot = f.properties.properties.plot_num;
       coords[plot] = f;
