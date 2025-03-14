@@ -1,9 +1,11 @@
 import express from 'express'
+import cors from 'cors';
 import config from './utils/config.mjs'
 import { getOrthos, getCoords } from './utils/d2s.mjs'
 
 
 const app = express();
+app.use(cors());
 
 
 app.get('/', (req, res) => {
