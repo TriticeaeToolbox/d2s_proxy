@@ -7,5 +7,5 @@
     "user": "username",
     "pass": "password"
   },
-  "tileserver": "https://dev.triticeaetoolbox.org/cog/tiles/WebMercatorQuad/{z}/{x}/{y}@2x?url={url}"
+  "tileserver": "https://tcap.pw.usda.gov/titiler/cog/tiles/WebMercatorQuad/{z}/{x}/{y}@2x?url={url}"
 }
